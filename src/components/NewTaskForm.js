@@ -28,7 +28,7 @@ function NewTaskForm({categories,onTaskFormSubmit}) {
         <input type="text" name="text" onChange={handleChange}/>
       </label>
       <label>
-        Category
+        Category:
         <select name="category" onChange={handleChange}>
           {catOptions}
         </select>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function CategoryFilter({categories,Scategory, onCategoryClick}) {
+function CategoryFilter({categories, Scategory, onCategoryClick}) {
 
   const categoryButtons = categories.map((category)=>{
     const categoryClass = category===Scategory ? "selected" : ""

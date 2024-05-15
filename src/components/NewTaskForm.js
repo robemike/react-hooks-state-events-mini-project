@@ -6,19 +6,19 @@ function NewTaskForm({categories,onTaskFormSubmit}) {
     category:"Code"
   })
 
-  const newCat = categories.filter((category)=> category!=="All")
-  const catOptions = newCat.map((category)=>{
+  const newCategory = categories.filter((category)=> category!=="All")
+  const categoryOptions = newCategory.map((category)=>{
     return <option key={category} value={category}>{category}</option>
   })
 
-  function handleChange(evt){
+  function handleChange(e){
     setNewTask({
       ...newTask,
-      [evt.target.name]: evt.target.value
+      [e.target.name]: e.target.value
     })
   }
-  function handleSubmit(evt){
-    evt.preventDefault()
+  function handleSubmit(e){
+    e.preventDefault()
     onTaskFormSubmit(newTask)
   }
   return (
@@ -30,7 +30,7 @@ function NewTaskForm({categories,onTaskFormSubmit}) {
       <label>
         Category:
         <select name="category" onChange={handleChange}>
-          {catOptions}
+          {categoryOptions}
         </select>
       </label>
       <input type="submit" value="Add task" />
